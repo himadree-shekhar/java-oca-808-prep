@@ -1,1 +1,13 @@
 Hello World :) 1月27日
+
+1月31日:
+Q. WHY java file name must the name of public class?
+A: JVM will be able to identify the entry point.
+
+Q. WHAT import does?
+A: It can import 1 or all the member class/interface of package.
+   But it can not import sub-packages.
+   NOTE: Syntax: import packageName.className;
+
+Q. WHY import is after package declaration?
+A: Because now import knows destination package and so can import the source.
