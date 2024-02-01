@@ -1,8 +1,11 @@
-Hello World :) 1月27日
+Since : 1月27日 2024
 
-1月31日:
-Q. WHY java file name must the name of public class?
-A: JVM will be able to identify the entry point.
+2月1日:
+Q. WHY Java Variable names are Case-Sensitive ?
+A: Because it uses a C-style syntax and most of languages are Case-Sensitive.
+
+Q. How java files are named ?
+A: File name should be as member public class otherwise by any member class name.
 
 Q. WHAT import does?
 A: It can import 1 or all the member class/interface of package.
@@ -11,3 +14,15 @@ A: It can import 1 or all the member class/interface of package.
 
 Q. WHY import is after package declaration?
 A: Because now import knows destination package and so can import the source.
+
+Q: WHAT is the Order of Access Levels of Java modifiers?
+A: private (ONLY inside Class) 
+   < No modifier (in same PACKAGE) 
+   < protected (+ Childs) 
+   < public (ANY)***
+
+Q: Why Top/Outer class can not be private ?
+A: Because Outer class is not a member of any class.
+
+
+
