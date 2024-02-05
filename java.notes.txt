@@ -1,11 +1,21 @@
 Since : 1月27日 2024
 
-2月1日:
+2月5日:
+
+Q: WHY it is possible to run Java files without any package ?
+A: No package ????
+
+Q: Why Multiple PACKAGE statements are not allowed.
+A: Because, Logically you can not put same thing in different packages! 
+
 Q. WHY Java Variable names are Case-Sensitive ?
 A: Because it uses a C-style syntax and most of languages are Case-Sensitive.
 
 Q. How java files are named ?
 A: File name should be as member public class otherwise by any member class name.
+   BUT remember, java files can be named any valid file name other then class name.
+   Cuz Javac takes scr java file name But creates .class files as containing class names.
+
 
 Q. WHAT import does?
 A: It can import 1 or all the member class/interface of package.
@@ -14,6 +24,10 @@ A: It can import 1 or all the member class/interface of package.
 
 Q. WHY import is after package declaration?
 A: Because now import knows destination package and so can import the source.
+
+Q. WHAT syntax import statements use ?
+A: (i) Uses package.*; ---> to import all member class/interface.
+   (ii) Uses package.class/interfaceName single item only.
 
 Q: WHAT is the Order of Access Levels of Java modifiers?
 A: private (ONLY inside Class) 
@@ -24,5 +38,61 @@ A: private (ONLY inside Class)
 Q: Why Top/Outer class can not be private ?
 A: Because Outer class is not a member of any class.
 
+Q: Why Outer class can not be protected ?
+A: Because Outer class is not ///// a member of any class. ????(clkup)
 
+Q: Why final keyword is used for?
+A: The final keyword is a non-access modifier,
+   Final variables value cannot be changed once initialized.
+   Final methods cannot be overridden by a subclass.
+   Final classes cannot be inherited/extended by a subclass. 
+
+Q: Why abstract keyword is used for?
+A:The abstract keyword is a non-access modifier,
+  used to create a abstract class and method.
+  Abstract Class cannot be INSTANTIATED.
+  Abstract Method can only be used in an abstract class and has NO BODY. 
+
+Q: What is correct Valid METHOD-DECLARATION format ?
+A: Modifiers(Access/Non-Access) ReturnType methodName(Parameter-list,, )
+
+Q: is Method Name must be CAPITALIZED ?
+A: Not Need But its just name convention.
+
+Q. Why main method can not change any Upper/Lower Case ?
+A: Because JVM is case sensitive to main entry point?
+
+Q: Can we declare the main() method as FINAL in Java ?
+A: Yes
+
+Q: Why 3 Dots(...) used next to a Parameter-Type used in Java?
+A: It means 0 or More Arguments of that type.
+
+Q: What is METHOD OVERLOADING in Java?
+A: 2 or more Methods may have SAME NAME if they differ in parameters 
+(different number of parameters, different types of parameters, Order of the parameters).
+But Method overloading cannot be done by changing the return type of methods.
+
+Q: What Types of Modifiers java has?
+A: 
+(i). Access Modifiers: controls the access level.
+(ii). Non-Access Modifiers: RESTRICT the characteristics of class or / Attributes,Methods
+   Example: final, abstract, static,transient,synchronized,volatile
+
+Q: What is BYTE data type ?
+A: It is an 8-bit signed two's complement integer. 
+
+Q: How can you force JVM to run Garbage Collector?
+A: System.gc() , Runtime.getRuntime().gc();
+
+Q: Why "this"-keyword used for ?
+A: The "this"-keyword refers to the current object in a method or constructor.
+    So, ELIMINATEs the confusion between class attributes and parameters with the same name.
+
+Q: What is DEPENDENCY-INJECTION in java?
+A: Being able to PASS (INJECT) dependencies instead of initializing the dependencies inside recipient class.
+?????? Need More Clear Reason
+
+Q: When toString() method called implicitly?
+A: When you pass Object reference in System.out.println(ObjX).
 
