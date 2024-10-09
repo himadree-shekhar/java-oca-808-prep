@@ -1,0 +1,12 @@
+java-input-note
+
+(9月/3)
+About Java Basics:
+=====================================================================================
+Question 1: 
+What commands are used to "Compile" and "Run" Java ?
+
+Answer : 
+The Command "javac" Compiles The ".java" Source File, Generating The ".class" Byte-Code File.
+The Command "java" Tells The JVM to Run The Fully Qualified Main-Class Without Extension.
+=====================================================================================

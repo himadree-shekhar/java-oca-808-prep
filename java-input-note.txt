@@ -1,0 +1,553 @@
+java-input-note
+
+(9月/3)
+java -verbose:class Main
+
+About Java Basics:
+=====================================================================================
+Question 1: 
+What commands are used to "Compile" and "Run" Java ?
+
+Answer : 
+The Command "javac" Compiles The ".java" Source File, Generating The ".class" Byte-Code File.
+The Command "java" Tells The JVM to Run The Fully Qualified Main-Class Without Extension.
+
+
+=====================================================================================
+Q2. About (Class-Initialization) and (Instance-Initialization) :
+
+A2. Before Executing-main() method,	The (CLASS-Initialization) Happen: 
+	That is, when the JVM finds a reference of Class for first time, 
+	It Will Load The Class(Bytecode) into Memory Once.
+
+	After Load Class, 
+	Both (Static-Variables) & Static{}-Initialization-Blocks are initialized
+	in the order they appear in that class from top to bottom. 
+	Also The Super-Class members are initialized before Sub-Class members.
+
+	But, Even if we declare Any Non-static variables before/outside main(),
+	It will initialized ONLY when an instance of the class is created.
+
+NOTE:
+Class initialization occurs when:
+A class is referenced for the first time(by create an instance of the class, access a static field, or invoke a static method)
+
+
+=====================================================================================
+Q3. About Encapsulation:
+
+A3. Encapsulation is about hide things that should be hidden, and make visible what is intended to be visible.
+A class is like a Medicine-Capsule 
+	Hides Or Encapsulates The [DATA(Variables) & METHODS()] within.
+So The class Encapsulates its data and methods.
+External code need to interacts with Data through the class.
+
+The Encapsulation adds 2 Merits such as:
+1. The External codes DO-NOT-DEPEND on the internal Data-Types Representation.
+2. The External codes DO-NOT-FACE any Name-Change Conflicts.
+
+However, to ensure (Proper-Encapsulation),
+Access-Methods should be effective to Handle Any INVALID-CHANGE, or Have DATA-VALIDATION, (Reference-Leaks) etc.
+
+=====================================================================================
+Q4. About main() method and packages:
+
+A4. 
+A class without main() can also be run from command-line:
+For example, By using static{ System.exit(0); }-block
+But It is not Recommended.
+
+Every class belongs to Named Or Unnamed-Package(AKA Default-Package)
+Please note that, 
+A (Named-Package) must have specific directory, 
+Unlike that, (Default-Package) doesn't have a directory. 
+
+A package may have just one class as well.
+Note that, Like we can make Empty Folder, 
+Similarly we can compile a (Empty-Named Package) even if it contains No Classes Or Code.
+But it will not Generate any Byte-code .class file Until 
+the package source must have one of the types: (Class, Interface, Enum, Or Record).
+
+
+=====================================================================================
+Q5. About main() method Arguments:
+
+A5. The main() method has 1 string array[] parameter which keep each passing Arguments in it.
+Also please note that this parameter name can be different.
+Note that, this can be empty array, 
+This is because an empty array is still an array object, with a length of zero 0.
+=====================================================================================
+
+=====================================================================================
+Q6. About import vs import static ?
+
+A6. 'import'-statement can import all classes from a package.(except static members)
+	However, the 'import static'-statement can only import the static members of classes of package.
+	
+	Another thing, 	 
+	To import all the member types , use Asterisk (.*) after the package-name.
+	To import all the static members of class, use Asterisk (.*) after the class-name.
+	import static <package>.<classname>.*; 
+
+=====================================================================================
+(SKIP) Q7. 
+
+=====================================================================================
+Q8. About proper encapsulation ?
+A8. The Fields should be hidden as private.
+But have Accessor methods() (Depends on Situation)
+
+=====================================================================================
+Q9.(SKIP)
+
+=================================================================================================
+Q10. About How to Access The Class By [Fully-Qualified Class-name] ?
+A10.
+If we are Not importing the class or the package :
+To find the class definition, We need to use the class's fully qualified name while using it.
+
+
+=================================================================================================
+Q11. About the Java main() Method-Signature:
+A11.
+JVM will recognize main() method By specific signature of
+public static void main(String[] args)
+Otherwise, The program compiles The Method as normal method. 
+Please note that, we can reorder of modifiers(static public) 
+But Can-Not change the return type(void).
+
+=================================================================================================
+Q12. About Benefits of polymorphism?
+A12.
+1. Benefit : It makes the code more reusable.
+Yes, Because Polymorphism allows super class / interface etc Shared across Multiple sub-classes.
+
+2. Benefit : It also makes the code more dynamic.
+Yes, Because Polymorphism allows dynamic binding of actual class of object at runtime.
+
+1. Disadvantage: It Does Not makes the code more efficient.
+Unfortunately Yes, Because Polymorphism allows dynamic-binding at run time which can be slight degradation.
+
+2. Disadvantage: It Does Not protects the code from Extension.
+Unfortunately Yes, Because Polymorphism is indeed achieved by Inheritance/Extension.
+
+=====================================================================================
+Q13. (SKIP)
+
+=====================================================================================
+Q14. What are the valid declarations of the standard main() method?
+
+A14. 
+1. public static void main (String[ ] args) : is standard
+	Note: order of static and public is irrelevant. 
+
+2. final static public void main (String[ ] arguments ):
+ 	here 'final' does not change the method signature.
+
+=====================================================================================
+Q15. About  Multiple Inheritance Of "Types" VS "States" ?
+
+A15.  
+"State" means instance fields of a class.
+In Java, a class can extend only from 1 class. 
+Thus, Java does not support multiple inheritance of state.
+
+However, (Interfaces, classes, and enums etc. are all "types")
+Java allows a class to implement multiple interfaces. 
+In this way, Java supports multiple inheritance of types.
+
+=====================================================================================
+Q16. Which packages are automatically imported ?
+A16. 
+1. "java.lang" (System, String).
+2.  Members of default-package.
+
+=====================================================================================
+Q17. Scope of Local-Variable VS Instance-Variable ?
+A17. 
+Local variable defined in a local-block can hides the instance field of Same-Name within that local-block.
+
+=====================================================================================
+Q18. Which of the following commands will compile and then print "hello"?
+public static void main(String[] args){
+     System.out.println(args[1]);
+}
+
+A18. 
+java MyFirstClass Any hello
+The 1st argument is ignored.
+But If not specify 2 parameters, this code will throw ArrayIndexOutOfBoundsException
+=====================================================================================
+
+
+############ CHAPTER: [Working with Java Data Types /17]
+
+===================================================================
+Q1. How to Access (Static & Instance) Field Using Keyword "this" & class Name ?
+
+A1. className.staticField, className.this.instanceField
+
+=====================================================================================
+Q2. About No Direct Access of instance field.
+
+A2. Note that Java doesn't have the concept of a global variable.
+Instead Access it by Object reference. ex: Object.field
+
+=====================================================================================
+Q3. About No 'unsigned' keyword
+
+A3. There no unsigned keyword in java! 
+However, char can be used as an unsigned integer.
+
+=====================================================================================
+Q4. About parseBoolean() method of java.lang.Boolean class?
+
+A4. 
+The method parseBoolean() : 
+Must have 1 string argument which is "Boolean Equivalent String"
+So, value must be string "true" or "false" (Not case-sensitive) (Not 1 or 0).
+Note that, To evaluate True the string "true" must be without(any white Spaces).
+
+=====================================================================================
+Q5. About Valid/Invalid Chained-Assignments ? (right-to-left)
+
+A5.
+Java Can Chained-Assignments:  a = b = c = 100;
+But (Declare & Chained-Assignments) Not Allowed in Together : int a = b = c = 100; is invalid
+
+=====================================================================================
+Q6. When is the Object Eligible For Garbage-Collection?
+A6. If there are no more references pointing to that object then is the Object Garbage-Collected.
+
+=====================================================================================
+Q7. How to make the object eligible for garbage collection?
+A7. By Assign the object = null
+Note: You cannot directly call the garbage collector. 
+But, you can call it by calling System.gc();
+
+=====================================================================================
+Q8. About Inside Class, Static-Initializer 'static{ }' AND Instance-Initializer '{ }'
+
+A8. 
+0. Normal-Initialization Members/Fields Initialized inside class and outside the methods.
+1. Static-Initializer Executed only once when the class is loaded. 
+2. Instance-Initializer Executed At Begin of the constructor.
+Note: static-Fields can be accessed from any block.						
+
+=====================================================================================
+Q9. Similar Concept / Garbage Collection.  
+A9. SKIP
+
+=====================================================================================
+Q10.  About 'double' vs 'float' Initialization:
+A10. 'float'-Initialization Must need suffix of letter F or f. Otherwise its consider as double.
+
+=====================================================================================
+Q11. About non-static variables in static{ } context.
+A11. non-static variable cannot be referenced from static{ } context.
+
+=====================================================================================
+Q12. About Long int Object Data-Type.
+
+A12. 
+The method Long.valueOf() returns a Long object containing a long value. 
+But method longValue() returns the long int value.
+
+=====================================================================================
+Q13. About Two static helper methods for booleans - parseBoolean() VS valueOf().
+
+A13. 
+1. Boolean.parseBoolean(): Returns Primitive Data.
+2. But, method Boolean.valueOf(String/bool) : Returns a reference to wrapper object of
+		either Boolean.TRUE or Boolean.FALSE 
+		ex: Boolean.valueOf(true) => Boolean.TRUE
+
+NOTE:
+When use the equality operator ( == ) with booleans, 
+(i) if One of the operands is a Boolean wrapper, 
+	then it will unbox into a boolean primitive before compare. 
+
+(ii)if both are Boolean wrappers, 
+then they are compared just like in the case of objects comparison.
+ Example, 
+ new Boolean("true") == new Boolean("true") => is false, 
+ 
+
+=====================================================================================
+Q14. About "this"-Keyword & current-object.
+
+A14. Inside any instance methods or constructor, 
+The "this"-Keyword is a reference to the current-object.
+
+=====================================================================================
+Q15. About Be careful on Tricky-Object-Statements Unable for Garbage-Collection?
+
+A15. For example, 
+	 return obj; => returns a reference, so Not Able for GC.
+
+=====================================================================================
+Q16. About initialization of fields VS "default"-constructor.
+
+A16. 
+"default"-constructor only calls to its super() implicitly. 
+It does not initialize any fields.
+
+However, All instance & static fields of a class are always initialized to their default values Even though there is no code that initializes them. 
+
+=====================================================================================
+Q17. About chain of super() constructor calls by "default"-constructor.
+A17. The Class itself is initialized only after its chain super-class has been initialized.
+
+=====================================================================================
+
+################### CHAPTER: [Using Operators and Decision Constructs] / 18
+
+=====================================================================================
+Q1.  About is String[] args array of main() null OR object?
+
+A1. The args[] array of main() method is NEVER null.
+Because, Even if No-Arguments Passed, 
+The Java still initializes the args[] array as an empty array (new String[0]). 
+This means 'args' is an array object.
+
+=====================================================================================
+Q2. About Short-Circuiting vs Non-Short-Circuiting Operator.
+
+A2. 
+&& (Logical AND Operator): Short-circuiting behavior (LHS) 
+& (Bitwise AND Operator): Non-short-circuiting
+Post-increment Operator (i++): Meaning uses the current value of i 
+							  and then increments i AFTER the Expression is Evaluated
+pass arguments to a method, you can pass variables or expressions.
+Example:
+The method1(i++) never called(Because of Short-Circuiting) in followings:
+bool = ( bool2 && method1(i++) );
+bool = ( bool1 || method1(i++) );
+
+=====================================================================================
+Q3. About Type-Promotion AND Operator'+' in System.out.println(). 
+
+A3. Here Operator '+' is Left-Associative:
+This Acts as:
+1. Addition: If 2 Operands are Numbers.
+2. Concatenation: If 1 Operand is String.
+
+Type Promotion:
+(4 + 1.0f) => int (4) to float(4.0)
+('a' + 1) => char('a') to int(97)
+
+=====================================================================================
+Q4. About java.lang.Object.equals() method : obj1.equals(obj2) ?
+
+A4. Object class's equals() method 
+	checks whether both references are pointing to the same object.
+
+=====================================================================================
+Q5. About  obj dot'.'-Operator VS (Type)Cast-Operator.
+
+A5. Dot '.'-operator has more precedence than the Cast-Operator.
+constructor => new Integer(i): DEPRECATED ! 
+Not-Caste : (Integer) t.intValue(); NG [Because 't' still type of class Object!]
+Force Caste: ((Integer) t).intValue(); OK
+
+=====================================================================================
+Q6.About Operators-Precedence in Operators Boolean VS Assignment(=) / Watch-Out 'unexpected type' Mixing ?
+
+A6. Note that Boolean operators have More Precedence than Assignment(=) Operator.
+In fact, Assignment(=) has the Least Precedence Of All Operators!
+(b2 = b1 != b2) => Mixing Order OK 
+BUT (b2 != b1 = !b2) =>NG 
+
+
+=====================================================================================
+Q7. About Precedence incompatible types error in dot'.' and caste'()'?
+
+A7. The dot'.'-Operator has Higher Precedence than the Cast-Operator.
+((X)y).val => get X.val
+(X) y.val => NG caste val of Y in X!
+
+=====================================================================================
+Q8. About Rules for a switch() Statement ?
+
+A8. 
+1. Only String, byte, char, short, int, (and their wrapper classes eg. Integer.valueOf()), and enums can be used as types of a switch variable.
+
+2. The Case-Constants must be Assignable to the switch variable.
+
+3. The Switch Variable Type must be Big Enough to hold all the case constants.
+
+4. All Case-Labels should be COMPILE TIME CONSTANTS. (No Method Calls etc)
+Like any literals or final variable or variable assignment that is evaluted before.
+
+5. [Duplicate Case Label] : No two of the Case Constant expressions associated with a switch statement may have the Same Value.
+
+6. [Duplicate Default Label] : The default label is optional and at most one default label may be associated with the same switch statement.
+
+=====================================================================================
+Q9. About Execution-Flow when if-else chain Do Not Cascade {} ? 
+
+A9. In such case The 'if' & 'else' act like Hierarchy of Opening and Closing brackets.
+
+=====================================================================================
+Q10. switch() Statement SIMILAR to Q8
+
+A10. SKIP
+
+=====================================================================================
+Q11. About Operators i+= , ++i
+
+A11. SKIP
+
+=====================================================================================
+Q12. About Evaluate-Expression
+
+A12. SKIP
+
+=====================================================================================
+Q13. About Short-Circuiting-Operation / String NullPointerException.
+
+A13. SKIP
+
+=====================================================================================
+Q14. switch() Statement SIMILAR to Q8
+A14. SKIP
+
+=====================================================================================
+Q15. 
+A15.
+
+=====================================================================================
+Q16. About Operator Preference.
+A16. Multiplication has more Precedence Than Addition.
+BODMAS-Abbreviation can be used to evaluate the expressions.
+
+B Brackets first
+O Orders (i.e. Powers and Square Roots, etc.)
+DM Division and Multiplication (left-to-right)
+AS Addition and Subtraction (left-to-right)
+
+=====================================================================================
+Q17. About Ternary-Operator(?:) / 'void' type not allowed here ?
+
+A17. The ternary operator ?: is designed to return a value(so can not be void). 
+Like if-else statement
+booleanExpression ? expression1 : expression2
+The Types Of The 2nd And 3rd Operands Determine The Type Of The Conditional booleanExpression.
+
+If the 2nd And 3rd Operands are of different types, 
+the operator may perform a Implicit Type conversion on the operand that it evaluates.
+
+if exactly one of the operands is null, 
+the conditional operator produces a value of the type of the other operand.
+
+=====================================================================================
+Q18. Related To Handle Last Argument Index in main(String args[ ]) when No-Args.
+
+A18. 
+int i = args.length-1;
+if (i > 0) --> Logically Bad as (0>0) Miss When only 1 Arg !
+
+
+################### CHAPTER: [Creating and Using Arrays] / 9
+=====================================================================================
+Q1. About Defaults Values in Array Types?
+
+A1. whenever you create an array all of its elements are automatically given defaults values. All Numeric types are initialized to 0 (or 0.0), 
+Objects are initialized to null, 
+and booleans to false.
+
+=====================================================================================
+Q2. Related To Q1 (default values in instance variables)
+A2. SKIP
+
+=====================================================================================
+Q3. About Assignment(=) Operator  ?
+A3. Assignment(=) Operator 
+	1. Simple Assignment Operator : array[index] = value; (Right-To-Left)
+	2. Compound Assignment Operator : array[index] += value; (Left-To-Right)
+For Arrays: First, the dimension expressions are evaluated, (Left-To-Right) !
+	iA[i] = i = 30; -----> iA[0] = 30 ;
+
+=====================================================================================
+Q4. About multi dimensional array.
+A4. SKIP
+
+=====================================================================================
+Q5. About valid way to create and initialize Array Of Objects ?
+A5. 
+In such case watch out on Object VS Object[] !!!
+1. Illegal initializer for Object {}
+2. Array creation with both dimension expression and initialization is Illegal!!!
+new Object[]{ "aaa", new Object(), new ArrayList() }; -----> Object{Object1, Objec2,...}
+new Object[]{ "aaa", new Object(), new ArrayList(), {} }; -----> Object[]{Object1[], Objec2[],...}
+
+
+=====================================================================================
+Q6. statements about an array are correct?
+A6. 
+1. Element indexing starts at 0.
+2. Arrays cannot grow in size once created. ArrayLists can do dynamically.
+
+=====================================================================================
+Q7. Related to initialize with default values.
+A7. SKIP
+
+=====================================================================================
+Q8. Related to Array initialize with default values.
+
+A8.
+1. For Arrays of primitive types are initialized to their default values.
+2. For Arrays of non-primitive types are initialized to null.
+
+=====================================================================================
+Q9. About NullPointerException VS ArrayIndexOutOfBoundsException ?
+
+A9.
+1. ArrayIndexOutOfBoundsException: Simply Means It Does Not Exist.
+2. NullPointerException: Simply Means It Does Exist But it is null itself.
+NOTE: null and { } Not Same!
+
+
+################### CHAPTER: Using Loop Constructs / 10
+
+=====================================================================================
+Q1. About Infinite Empty Loops for ( ; ; ) OK !
+
+A1. Surprisingly, in java, Empty Termination-Condition (;) will be evaluated to True!
+
+for (Initialization-once; Termination-Condition; Update) { }
+
+=====================================================================================
+Q2. About for-loop VS while-loops ?
+
+A2. In Java, while or do/while loops takes only an expression that returns a boolean. 
+But unlike a for loop, we cannot put Initialization and Increment sections.
+
+=====================================================================================
+Q3. About "str".equals(s).
+A3. SKIP
+
+=====================================================================================
+Q4. About labeled break or continue statement / Branching Statements ?
+
+A4.Remember that a labeled break or continue statement 
+Must Always Exist inside the loop where the label is declared.
+
+1. An Unlabeled statement terminates the innermost switch, for, while, or do-while statement. 2. But Labeled break terminates an outer statement. 
+3. A labeled continue statement skips the current iteration of an outer loop marked with the given label.
+
+=====================================================================================
+Q5. Related To loop condition. 
+A5. SKIP
+
+
+=====================================================================================
+Q6. About Tricky Loops do-while ?
+A6. Body Executes First Before condition !!!
+do {      
+     if (i++ > --j) continue;
+   } while (i < 5);
+
+=====================================================================================
+Q7.
+A7.
