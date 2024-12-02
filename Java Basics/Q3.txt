@@ -1,0 +1,33 @@
+Question: 
+Given the following code: 
+
+interface Movable {
+    int offset = 100;
+    public void move(int dx);
+}
+
+interface Growable {
+    public void grow(int dy);
+}
+
+class Animal implements Movable, Growable {
+    public void move(int dx) {}
+    public void grow(int dy) {}
+}
+
+Please select 1 options:
+
+(A) Animal class illustrates Java's support for multiple inheritance of type
+(B) Animal class illustrates Java's support for multiple inheritance of state
+(C) Animal class illustrates Java's support for multiple inheritance of type as well as state
+(D) Animal class illustrates Java's support for multiple implementation inheritance
+
+-------------------------------------------------------------------
+Answer : 
+(A) : 
+Note: Java does not support multiple inheritance of classes.
+
+But, The Java programming language supports multiple inheritance of type, 
+which is the ability of a class to implement more than one interface. 
+Here(the types being the interfaces themselves).
+
