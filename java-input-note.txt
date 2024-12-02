@@ -1,5 +1,7 @@
 java-input-note
 
+---> 12/2 : SSH Push Test
+
 (9月/3)
 java -verbose:class Main
 
