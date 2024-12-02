@@ -1,0 +1,30 @@
+Question: 
+Given the following contents of two java source files:
+
+package util.log4j;
+public class Logger {
+  public void log(String msg) {
+    System.out.println(msg);
+  }
+}
+
+package util;
+public class TestClass {
+  public static void main(String[] args) throws Exception {
+    Logger logger = new Logger();
+    logger.log("hello");
+  }
+}
+
+What changes, when made independently, will enable the code to compile and run?
+Please select 2 options:
+
+(A) Replace Logger logger = new Logger(); with: log4j.Logger logger = new log4j.Logger();
+(B) Replace package util.log4j; with package util;
+(C) Replace Logger logger = new Logger(); with: util.log4j.Logger logger = new util.log4j.Logger();
+(D) Remove package util.log4j; from Logger.
+(E) Add import log4j; to TestClass.
+-------------------------------------------------------------------
+Answer : 
+(B) : This will put both the classes in the same package
+(C) : By using a fully qualified class name
