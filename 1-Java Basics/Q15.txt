@@ -1,0 +1,37 @@
+Question: 
+Given:
+
+public class Triangle{
+    public int base;
+    public int height;
+    public double area;
+    
+    public Triangle(int base, int height){
+        this.base = base; this.height = height;
+        updateArea();
+    }
+
+    void updateArea(){
+        area = base*height/2;
+    }
+    public void setBase(int b){ base  = b; updateArea(); }
+    public void setHeight(int h){ height  = h; updateArea(); }
+}
+
+The above class needs to protect an invariant on the "area" field. Which three members must have the public access modifiers removed to ensure that the invariant is maintained?
+
+You had to select 3 options :
+(A) the base field
+(B) the height field
+(C) the area field
+(D) the Triangle constructor
+(E) the setBase method
+(F) the setHeight method
+-------------------------------------------------------------------
+Answer : A, B, C 
+
+In this context, the invariant is the mathematical rule unchanged 
+that area must always be base*height/2.
+
+Public access allows external code from directly modifying them 
+and potentially breaking the invariant.

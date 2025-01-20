@@ -1,0 +1,20 @@
+Question: 
+Given the following class, which of these are valid ways of referring to the class from outside of the package com.enthu?   
+
+package com.enthu; 
+public class Base {  
+	// lot of code... 
+} 
+
+Please select 2 options:
+
+(A) Base
+(B) By importing the package com.* and referring to the class as enthu.Base
+(C) importing com.* is illegal
+(D) By importing com.enthu.* and referring to the class as Base
+(E) By referring to the class as com.enthu.Base
+
+-------------------------------------------------------------------
+Answer : 
+(D) : Example: import com.enthu.*;
+(E) : Example: com.enthu.Base;

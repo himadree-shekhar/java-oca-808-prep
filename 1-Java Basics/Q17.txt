@@ -1,0 +1,16 @@
+Question: 
+Which of the given options can be successfully inserted at line 1 ?
+
+//line 1    
+public class A {
+}
+
+(A) import java.lang.*;
+(B) package p.util;
+(C) public class MyClass{ }
+(D) abstract class MyClass{ }
+-------------------------------------------------------------------
+Answer : 
+(A) import java.lang.*;
+(B) package p.util;
+(D) abstract class MyClass{ }

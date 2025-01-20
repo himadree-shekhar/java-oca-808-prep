@@ -1,0 +1,38 @@
+Question: 
+You are asked to develop an application for a car rental company. 
+As a part of that, you are given the following requirements 
+1. Implement three classes -  Car, SUV, and MiniVan, where the Car class is the super class of SUV as well as MiniVan. 
+2. Implement method int getDailyRate()  that returns the daily price of the car. 
+3. Implement method void printDetails() that prints the details of the car.  
+Which of the following definition of Car class adds a valid layer of abstraction to the class hierachy?
+
+You had to select 1 options :
+(A)
+public abstract class Car {
+    public abstract int getDailyRate();
+    public void printDetails() {
+    // code for printing details goes here    
+    } 
+}
+
+(B)
+public abstract class Car {
+    public int getDailyRate();
+    public void printDetails();
+}
+
+(C)
+public abstract class Car {
+    public abstract int getDailyRate();
+    public abstract void printDetails();
+}
+
+(D)
+public abstract class Car {
+     public abstract int getDailyRate();
+     public abstract void printDetails() {
+     // code for printing details goes here    
+    } 
+}
+-------------------------------------------------------------------
+Answer : C 

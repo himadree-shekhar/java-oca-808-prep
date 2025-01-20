@@ -97,7 +97,7 @@ A6. 'import'-statement can import all classes from a package.(except static memb
 =====================================================================================
 Q8. About proper encapsulation ?
 A8. The Fields should be hidden as private.
-But have Accessor methods() (Depends on Situation)
+;;But have Accessor methods() (Depends on Situation)
 
 =====================================================================================
 Q9.(SKIP)
