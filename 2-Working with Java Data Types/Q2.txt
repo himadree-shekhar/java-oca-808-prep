@@ -1,0 +1,26 @@
+Given:
+Given the following class, which statements can be inserted at line 1 without causing the code to fail compilation?
+
+public class TestClass{
+   int a;
+   int b = 0;
+   static int c;
+   public void m(){
+      int d;
+      int e = 0;
+      // Line 1
+   }
+}
+
+Please select 4 options :
+(A) a++;
+(B) b++;
+(C) c++;
+(D) d++;
+(E) e++;
+-------------------------------------------------------------------
+Answer : 
+(A) a++; : OK : class variable has (default value)
+(B) b++; : OK : instance variable has (default value)
+(C) c++;
+(E) e++;

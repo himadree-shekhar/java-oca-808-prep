@@ -1,16 +1,29 @@
-Consider the following lines of code:
+Given:
+public class TestClass{
+  public static int getSwitch(String str){
+      return (int) Math.round( Double.parseDouble(str.substring(1, str.length()-1)) );
+  }
+  public static void main(String args []){
+    switch(getSwitch(args[0])){
+      case 0 : System.out.print("Hello ");
+      case 1 : System.out.print("World"); break;
+      default : System.out.print("Good Bye");
+    }
+  }
+}
 
-Integer i = new Integer(42);
-Long ln = new Long(42);
-Double d = new Double(42.0);
+What will be printed by the above code if it is run with command line: java TestClass --0.50 (There are two minuses before 0.)
 
-Which of the following options are valid code fragments?
-
+Please select 1 option :
+(A) Hello
+(B) World
+(C) Hello World
+(D) Hello World Good Bye
+(E) Good Bye
 -------------------------------------------------------------------
 Answer : 
-(D) : Example: import com.enthu.*;
-(E) : Example: com.enthu.Base;
-
-i.equals(d);
-
-
+(C) Hello World : 
+-> args[0] :  --0.50
+-> str.substring(1, str.length()-1) => "--0.50".substring(1, (6-1) ) => -0.5
+getSwitch(...) returns 0
+Run from case-0 til "break" in case-1
