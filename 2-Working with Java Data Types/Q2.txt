@@ -20,7 +20,8 @@ Please select 4 options :
 (E) e++;
 -------------------------------------------------------------------
 Answer : 
-(A) a++; : OK : class variable has (default value)
-(B) b++; : OK : instance variable has (default value)
-(C) c++;
-(E) e++;
+(A) a++; 
+(B) b++; : instance variable (has default value)
+(C) c++; : class variable (has default value)
+(E) e++; : local variable But initialize (has No default value)
+

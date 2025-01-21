@@ -1,0 +1,21 @@
+Consider the following lines of code:
+
+// *** Boxed Primitive Constructors(Deprecated) ***
+Integer i = new Integer(42); 
+Long ln = new Long(42);
+Double d = new Double(42.0);
+
+Which of the following options are valid code fragments?
+
+
+Please select 3 options :
+(A) i == ln;
+(B) ln == d;
+(C) i.equals(d);
+(D) d.equals(ln);
+(E) ln.equals(42);
+-------------------------------------------------------------------
+Answer : 
+(C) i.equals(d);
+(D) d.equals(ln);
+(E) ln.equals(42);

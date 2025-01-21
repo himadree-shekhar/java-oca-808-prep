@@ -1,0 +1,15 @@
+Which of the following are valid code snippets appearing in a method:
+
+Please select 3 options :
+(A) int a, b, c; a = b = c = 100;
+(B) int a, b, c=100;
+(C) int a=100, b, c;
+(D) int a= 100 = b = c;
+-------------------------------------------------------------------
+Answer : 
+
+*NOTE: Chaining of variables to assign a value at declaration is (Not-Allowed)
+
+(A) int a, b, c; a = b = c = 100;
+(B) int a, b, c=100;
+(C) int a=100, b, c;
