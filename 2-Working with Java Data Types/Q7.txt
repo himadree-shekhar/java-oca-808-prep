@@ -1,0 +1,32 @@
+Q7
+What will the following code print?  
+
+public class TestClass {
+    static char ch;
+    static float f;
+    static boolean bool;
+
+    public static void main(String[] args) {
+        System.out.print(f);
+        System.out.print(" ");
+        System.out.print(ch);
+        System.out.print(" ");
+        System.out.print(bool);
+    }
+}
+
+
+Please select 1 options :
+
+(A) 0.0???false
+(B) 0.0f??false
+(C) 0.0 0 false
+(D) 0.0???true
+(E) 0.0f??true
+(F) 0.0f 0 true
+-------------------------------------------------------------------
+Answer :
+(A) 0.0???false
+NOTE: 
+Å°   float default value : 0.0
+Å°   char default value is (null-character) : Blank Space (as null is non-printable, invisible character)

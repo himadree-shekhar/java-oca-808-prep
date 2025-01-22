@@ -1,5 +1,24 @@
 Q6
-The following code snippet will print 4.
-int i1 = 1, i2 = 2, i3 = 3;
+Which of the following options will yield 
+a Boolean wrapper object containing the value true?
 
-Q7
+Please select 1 options :
+
+(A) Boolean.parseBoolean(" true ")  
+(B) Boolean.parseBoolean("true")
+(C) Boolean.valueOf(true)
+(D) Boolean.valueOf("trUE")
+(E) Boolean.TRUE
+-------------------------------------------------------------------
+Answer :
+(C) Boolean.valueOf(true)
+(D) Boolean.valueOf("trUE")
+(E) Boolean.TRUE
+
+NOTE: 
+Å°  Boolean class constructors : Boolean(String) , Boolean(boolean)
+Å°  Boolean.parseBoolean(String) : 
+    > Returns Primitive Boolean Only
+    > Returns true if string argument is not null and is equal (ignoring case) to the string "true".
+
+Å°  Boolean.valueOf(String), valueOf(Boolean) : Returns Wrapper Objects Boolean.TRUE or Boolean.FALSE
