@@ -1,0 +1,26 @@
+Q8
+What will the following code print?  
+public class TestClass {
+    public static void main(String[] args) {
+        int x = 1____3;   //1          
+        long y = 1_3;     //2          
+        float z = 3.123_45678f; //3          
+        System.out.println(x+" "+y+" "+z);     
+        } 
+}
+
+Please select 1 options :
+
+(A) Compilation error at //1
+(B) Compilation error at //2
+(C) Compilation error at //3
+(D) Compilation error at //1 and //3
+(E) 10003 103 3.12345678
+(F) 13 13 3.1234567
+-------------------------------------------------------------------
+Answer :
+(F) 13 13 3.234567
+NOTE: 
+(i)  It is legal to have Multiple Underscores(_) Between 2-Digits.
+(ii) Can use any number of underscores between all kinds of numbers including long, double, float, binary.
+(iii) float data type is of 7 decimal digits.

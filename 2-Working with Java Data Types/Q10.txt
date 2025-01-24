@@ -1,0 +1,24 @@
+Q10
+Given:
+
+import java.util.*;
+public class TestClass {
+    public static void main(String[] args) throws Exception {
+        ArrayList<Double> al = new ArrayList<>();
+
+        //INSERT CODE HERE
+     }
+}
+What can be inserted in the above code so that it can compile without any error?
+
+
+Please select 2 options :
+
+(A) al.add(111);
+(B) System.out.println(al.indexOf(1.0));
+(C) System.out.println(al.contains("string"));
+(D) Double d = al.get(al.length);
+-------------------------------------------------------------------
+Answer :
+(B) System.out.println(al.indexOf(1.0));    // indexOf(Object o) : Return index or -1
+(C) System.out.println(al.contains("string"));  // contains(Object o) : Return True/False

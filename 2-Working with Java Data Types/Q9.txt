@@ -1,0 +1,18 @@
+Q9
+Given:
+String mStr = "123"; 
+long m = // 1 
+
+Which of the following options when put at //1 will assign 123 to m?
+
+Please select 1 options :
+
+(A) new Long(mStr);
+(B) Long.parseLong(mStr);
+(C) Long.longValue(mStr);
+(D) (new Long()).parseLong(mStr);
+(E) Long.valueOf(mStr).longValue();
+-------------------------------------------------------------------
+Answer :
+(B) Long.parseLong(mStr); // Parses the string as long value
+(E) Long.valueOf(mStr).longValue(); // Returns the value of this Long as a long value
