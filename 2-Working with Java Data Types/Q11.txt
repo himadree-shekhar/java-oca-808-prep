@@ -1,0 +1,24 @@
+Q7
+Given the following code snippet:
+   int rate = 10;
+   int t = 5;
+   XXX amount = 1000.0;
+   for(int i=0; i<t; i++){
+      amount = amount*(1 - rate/100);
+   }
+What can XXX be?
+
+Please select 1 options :
+
+(A) int
+(B) long
+(C) only double
+(D) double or float
+(E) float
+-------------------------------------------------------------------
+Answer : 
+(C) only double
+
+NOTE: 
+(i) By default, Java uses double to represent its floating-point numerals
+(ii) Else to be a float type, need Explicit-Casting (append `f`)
