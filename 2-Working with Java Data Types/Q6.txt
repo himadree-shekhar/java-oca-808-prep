@@ -16,9 +16,9 @@ Answer :
 (E) Boolean.TRUE
 
 NOTE: 
-Å°  Boolean class constructors : Boolean(String) , Boolean(boolean)
-Å°  Boolean.parseBoolean(String) : 
+Boolean class constructors : Boolean(String) , Boolean(boolean)
+Boolean.parseBoolean(String) : 
     > Returns Primitive Boolean Only
     > Returns true if string argument is not null and is equal (ignoring case) to the string "true".
 
-Å°  Boolean.valueOf(String), valueOf(Boolean) : Returns Wrapper Objects Boolean.TRUE or Boolean.FALSE
+Boolean.valueOf(String), valueOf(Boolean) : Returns Wrapper Objects Boolean.TRUE or Boolean.FALSE

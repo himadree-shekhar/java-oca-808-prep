@@ -10,7 +10,7 @@ int x1 = _52;
 (E) None of the above declarations are valid
 -------------------------------------------------------------------
 Answer :
+(D) float f2 = 123_345_667F;
 
 Underscores (_)in Numerical-Literal
 *NOTE: Underscore (_) can appear between Digits in any (Numerical-Literal)
-(D) float f2 = 123_345_667F;
