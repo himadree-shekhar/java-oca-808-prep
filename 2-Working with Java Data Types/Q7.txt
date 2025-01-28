@@ -18,15 +18,15 @@ public class TestClass {
 
 Please select 1 options :
 
-(A) 0.0???false
-(B) 0.0f??false
+(A) 0.0   false
+(B) 0.0f  false
 (C) 0.0 0 false
-(D) 0.0???true
-(E) 0.0f??true
+(D) 0.0   true
+(E) 0.0f   true
 (F) 0.0f 0 true
 -------------------------------------------------------------------
 Answer :
-(A) 0.0???false
+(A) 0.0   false
 NOTE: 
-��   float default value : 0.0
-��   char default value is (null-character) : Blank Space (as null is non-printable, invisible character)
+float default value : 0.0
+char type default value is (null-character) : Blank Space (as null is non-printable, invisible character)

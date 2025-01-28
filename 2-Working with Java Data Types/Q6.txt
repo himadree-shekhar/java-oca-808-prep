@@ -2,7 +2,7 @@ Q6
 Which of the following options will yield 
 a Boolean wrapper object containing the value true?
 
-Please select 1 options :
+Please select 3 options :
 
 (A) Boolean.parseBoolean(" true ")  
 (B) Boolean.parseBoolean("true")

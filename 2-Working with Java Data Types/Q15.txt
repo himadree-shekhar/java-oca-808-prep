@@ -1,0 +1,15 @@
+Q15
+Which of the following is illegal ?
+
+
+Please select 1 options :
+
+(A) char c = 320; 
+(B) 
+(C) 
+(D) 
+(E) 
+-------------------------------------------------------------------
+Answer : 
+
+NOTE: 

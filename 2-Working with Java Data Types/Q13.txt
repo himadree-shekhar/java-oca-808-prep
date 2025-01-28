@@ -1,0 +1,52 @@
+Q13
+Note: This question may be considered too advanced for this exam.  
+Which statements can be inserted at LINE-1 in the following code 
+to make the program write 'x' on the standard output when run?
+
+public class AccessTest {
+
+    String a = "x";
+    static char b = 'x';
+    String c = "x";
+
+    class Inner {
+
+        String a = "y";
+
+        String get() {
+            String c = "temp";
+            // LINE-1
+            return c;
+        }
+    }
+
+    AccessTest() {
+        System.out.println(new Inner().get());
+    }
+
+    public static void main(String args[]) {
+        new AccessTest();
+    }
+}
+
+Please select 3 options :
+
+(A) c = c;
+(B) c = this.a;
+(C) c = ""+AccessTest.b;
+(D) c = AccessTest.this.a;
+(E) c = ""+b;
+-------------------------------------------------------------------
+Answer : 
+(A) c = c; // NOT: No change, same local c is assigned to itself.(Variable-Shadowing)
+(B) c = this.a; // NOT: Refers to current object of class Inner.
+
+(C) c = ""+AccessTest.b; // OK: AccessTest.b returns the char 'x', and "" + converts it to a String, so c becomes "x".
+(D) c = AccessTest.this.a; // OK: Sets c to outer class's a ('x').
+(E) c = ""+b; // OK: static variable in outer class is accessible directly in inner class
+
+NOTE: 
+Variable-Shadowing : When an inner variable shares the same name as an outer one, it shadows the outer variable in its scope.
+'this' is a reference to the current object of the class where it's used.
+'Class.this' refers to the outer class object.
+In Java, you can't directly assign a char to a String because they are incompatible types.

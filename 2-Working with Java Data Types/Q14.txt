@@ -1,0 +1,24 @@
+Q14
+Which of the changes given in options can be done (independent of each other) to let the following code compile and run without errors when its generateReport method is called?
+
+class SomeClass{
+   String s1 = "green mile";   // 0
+   public void generateReport( int n ){
+      String local;   // 1
+      if( n > 0 ) local = "good";   //2
+      System.out.println( s1+" = " + local );   //3
+   }
+}
+
+
+Please select 2 options :
+
+(A) Insert after line 2 : else local = "bad";
+(B) Insert after line 2 : if(n <= 0) local = "bad";
+(C) Move line 1 and place it after line 0.
+(D) change line 1 to : final String local = "rocky";
+(E) The program already is without any errors.
+-------------------------------------------------------------------
+Answer : 
+
+NOTE: 
