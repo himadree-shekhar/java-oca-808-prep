@@ -9,8 +9,13 @@ package statement:
 - Java runtime expects the class to be found under its package (java packageName.ClassName)
 - Different source files can have the same package name, But source files must be in the same folder structure. 
 
+Wildcard (.*) in import static VS import package different.
+
 import static java.lang.System.*;
 - To import all the static members of the System class(Not package)
+
+import package.* 
+- will not import the subpackage. It will only import the classes in package.
 
 class can be refer by:
 - Import The class
@@ -43,3 +48,9 @@ Tricky when a global variable and a local variable have the same name :
 - 'this' cannot be reassign to reference to a new object.
 - an instance variable is accessible through 'this'.
 - 'this' can also access static variables too.
+
+(fields and methods) Order:
+- In Java, we can declare fields and methods in any order inside the class.
+
+class & file:
+- In Java, the order in which classes appear in the file does not matter if both classes are in the same file.
