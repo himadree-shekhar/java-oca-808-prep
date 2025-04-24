@@ -31,8 +31,8 @@ class can be refer by:
 - Fully Qualified Name : package.subpackage.ClassName
 
 Which packages are automatically imported ?
-- java.lang
-- unnamed packages (or default package) that are in the same directory
+- java.lang : Because it contains core classes like String, System.
+- Unnamed Packages : in the same directory
 
 File Names:
 - For public classes: The file name must match the class name (case-sensitive)
