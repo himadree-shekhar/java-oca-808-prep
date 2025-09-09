@@ -1,0 +1,33 @@
+Question: 
+
+Tag: Lambda Expression
+
+What will the following code print when run ?
+
+import java.util.function.Predicate;
+class Employee {
+  int age; //1 
+}
+
+public class TestClass {
+  public static boolean validateEmployee(Employee e, Predicate < Employee > p) {
+    return p.test(e);
+  }
+  
+  public static void main(String[] args) {
+    Employee e = new Employee(); //2
+    System.out.println(validateEmployee(e, e -> e.age < 10000)); //3    
+  }
+}
+
+Please select 1 option:
+
+(A) It will fail to compile at line marked //1
+(B) It will fail to compile at line marked //2
+(C) It will fail to compile at line marked //3
+(D) It will compile fine and print true when run.
+(E) It will compile fine and print false when run.
+
+-------------------------------------------------------------------
+Answer : 
+(C) It will fail to compile at line marked //3

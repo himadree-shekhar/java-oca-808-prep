@@ -1,0 +1,28 @@
+Question: 
+
+Tag: Lambda Expression
+
+What can be inserted in the code below so that it will print true when run ?
+
+  public class TestClass {
+    public static boolean checkList(List list, Predicate < List > p) {
+      return p.test(list);
+    }
+    public static void main(String[] args) {
+      boolean b = //WRITE CODE HERE       
+        System.out.println(b);
+    }
+  }
+
+Please select 2 options:
+
+(A) checkList(new ArrayList(), al -> al.isEmpty());
+(B) checkList(new ArrayList(), ArrayList al -> al.isEmpty());
+(C) checkList(new ArrayList(), al -> return al.size() == 0);
+(D) checkList(new ArrayList(), al -> al.add("hello"));
+(E) checkList(new ArrayList(), (ArrayList al) -> al.isEmpty());
+
+-------------------------------------------------------------------
+Answer : 
+(A) checkList(new ArrayList(), al -> al.isEmpty());
+(D) checkList(new ArrayList(), al -> al.add("hello"));

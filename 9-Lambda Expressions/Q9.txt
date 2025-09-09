@@ -1,0 +1,43 @@
+Question: 
+
+Tag: Lambda Expression
+
+
+Given :
+
+//In Data.java
+public class Data{
+    int value;
+    Data(int value){
+        this.value = value;
+    }
+}
+
+and the following code fragments:
+public void printUsefulData(ArrayList<Data> dataList, Predicate<Data> p){
+   for(Data d: dataList){
+        if(p.test(d)) System.out.println(d.value);
+   }
+}
+
+....
+ArrayList<Data> al = new ArrayList<Data>();
+al.add(new Data(1));al.add(new Data(2));al.add(new Data(3));
+
+//INSERT METHOD CALL HERE
+
+Which of the following options can be inserted above so that it will print 3 ?
+
+
+Please select 2 options:
+
+(A) printUsefulData(al, (Data d)-> { return d.value>2; }  );
+(B) printUsefulData(al, d-> d.value>2 );
+(C) printUsefulData(al, (d)-> return d.value>2;  );
+(D) printUsefulData(al, Data d-> d.value>2  );
+(E) printUsefulData(al, d -> d.value>2;   );
+
+-------------------------------------------------------------------
+Answer : 
+(A) printUsefulData(al, (Data d)-> { return d.value>2; }  );
+(B) printUsefulData(al, d-> d.value>2 );

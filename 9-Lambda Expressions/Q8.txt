@@ -1,0 +1,20 @@
+Question: 
+
+Tag: Lambda Expression
+
+
+Which of the following lambda expressions can be used to invoke a method 
+that accepts a java.util.function.Predicate as an argument ?
+
+Please select 2 options:
+
+(A) x -> System.out.println(x)
+(B) x -> System.out.println(x);
+(C) x -> x == null
+(D) () -> true
+(E) x->true
+
+-------------------------------------------------------------------
+Answer : 
+(C) x -> x == null
+(E) x->true

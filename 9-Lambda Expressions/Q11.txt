@@ -1,0 +1,16 @@
+Question: 
+
+Tag: Lambda Expression
+
+Which of the following statements are correct regarding a functional interface ?
+
+Please select 1 option:
+
+(A) It has exactly one method and it must be abstract.
+(B) It has exactly one method and it may or may not be abstract.
+(C) It must have exactly one abstract method and may have other default or static methods.
+(D) It must have exactly one static method and may have other default or abstract methods.
+
+-------------------------------------------------------------------
+Answer : 
+(C) It must have exactly one abstract method and may have other default or static methods.

@@ -1,0 +1,45 @@
+Question: 
+
+Tag: Lambda Expression
+
+Given:
+
+interface Process {
+  public void process(int a, int b);
+}
+
+public class Data {
+  int value;
+  Data(int value) {
+    this.value = value;
+  }
+}
+
+And the following code fragments: 
+public void processList(ArrayList < Data > dataList, Process p) {
+  for (Data d: dataList) {
+    p.process(d.value, d.value);
+  }
+}
+
+ArrayList < Data > al = new ArrayList < Data > ();
+al.add(new Data(1));
+al.add(new Data(2));
+al.add(new Data(3)); 
+//INSERT METHOD CALL HERE    
+
+Which of the following options can be inserted above so that it will print 1 4 9?
+
+Please select 3 options:
+
+(A) processList(al, a, b->System.out.println(a*b));
+(B) processList(al, (int a, int b)->System.out.println(a*b));
+(C) processList(al, (int a, int b)->System.out.println(a*b););
+(D) processList(al, (a, b)->System.out.println(a*b));
+(E) processList(al, (a, b) ->{ System.out.println(a*b); } );
+
+-------------------------------------------------------------------
+Answer : 
+(B) processList(al, (int a, int b)->System.out.println(a*b));
+(D) processList(al, (a, b)->System.out.println(a*b));
+(E) processList(al, (a, b) ->{ System.out.println(a*b); } );

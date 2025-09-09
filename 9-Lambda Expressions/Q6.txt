@@ -1,0 +1,44 @@
+Question: 
+
+Tag: Lambda Expression
+
+What will the following code print when compiled and run ?
+
+  public class Data {
+    int value;
+    Data(int value) {
+      this.value = value;
+    }
+    public String toString() {
+      return "" + value;
+    }
+
+    public static void main(String[] args) {
+      Data[] dataArr = new Data[] {
+        new Data(1), new Data(2),
+          new Data(3), new Data(4)
+      };
+
+      List < Data > dataList = Arrays.asList(dataArr); //1
+
+      for (Data element: dataList) {
+
+        dataList.removeIf( (Data d) -> { return d.value%2 ==  0; } );  //2
+
+        System.out.println("Removed " + d + ", "); //3
+      }
+    }
+  }
+
+Please select 1 option:
+
+(A) Removed 2, Removed 4
+(B) It will print Removed 2 and then an exception stack trace.
+(C) It will print an exception stack trace.
+(D) It will not compile due to //1
+(E) It will not compile due to //2
+(F) It will not compile due to //3
+
+-------------------------------------------------------------------
+Answer : 
+(F) It will not compile due to //3

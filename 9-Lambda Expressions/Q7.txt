@@ -1,0 +1,49 @@
+Question: 
+
+Tag: Lambda Expression
+
+Given:
+
+  //In Data.java
+  public class Data {
+    int value;
+    Data(int value) {
+      this.value = value;
+    }
+    public String toString() {
+      return "" + value;
+    }
+  }
+
+and the following code fragments:
+  public void filterData(ArrayList < Data > dataList, Predicate < Data > p) {
+    Iterator < Data > i = dataList.iterator();
+    while (i.hasNext()) {
+      if (p.test(i.next())) {
+        i.remove();
+      }
+    }
+  }
+  ....
+Data d = new Data(1);
+al.add(d);
+d = new Data(2);
+al.add(d);
+d = new Data(3);
+al.add(d);
+
+//INSERT METHOD CALL HERE
+System.out.println(al);
+
+Which of the following options can be inserted above so that it will print[1, 3] ?
+
+Please select 1 option:
+(A) filterData(al, d -> d.value%2 == 0 );
+(B) filterData(al, (Data x) -> x.value%2 == 0 );
+(C) filterData(al, (Data y) -> y.value%2  );
+(D) filterData(al, d -> return d.value%2 );
+
+
+-------------------------------------------------------------------
+Answer : 
+(B) filterData(al, (Data x) -> x.value%2 == 0 );

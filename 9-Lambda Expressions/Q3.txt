@@ -1,0 +1,21 @@
+Question: 
+
+Tag: Lambda Expression
+Which of the following are correct about java.util.function.Predicate?
+
+Please select 1 option:
+
+(A) It is an interface that has only one abstract method (among other non-abstract methods) with the signature - 
+    public void test(T t);
+(B) It is an interface that has only one abstract method (among other non-abstract methods) with the signature - 
+    public boolean test(T t);
+(C) It is an abstract class that has only one abstract method (among other non-abstract methods) with the signature - 
+    public abstract void test(T t);
+(D) It is an abstract class that has only one abstract method (among other non-abstract methods) with the signature -
+    public abstract boolean test(T t);
+
+
+-------------------------------------------------------------------
+Answer : 
+(B) It is an interface that has only one abstract method (among other non-abstract methods) with the signature - 
+    public boolean test(T t);
